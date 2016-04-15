@@ -17,4 +17,4 @@ encoding utf8 utf8
 term $TERM 
 
 # escape
-escape s
+escape ^Ss
