@@ -1,0 +1,20 @@
+vbell off
+startup_message off
+
+# statusline
+# - blue
+hardstatus alwayslastline "%{= bw} %c:%s  %{= bW}%-w%{=b Wk} %n* %t %{= bW}%+w %= [%l] "
+# - magenta
+#hardstatus alwayslastline "%{= mw} %c:%s  %{= mW}%-w%{=b Wk} %n* %t %{= mW}%+w %= [%l] "
+# - green
+#hardstatus alwayslastline "%{= gw} %c:%s  %{= gW}%-w%{=b Wk} %n* %t %{= gW}%+w %= [%l] "
+
+# encoding
+defencoding utf8
+encoding utf8 utf8
+
+# terminal
+term $TERM 
+
+# escape
+escape s
