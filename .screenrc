@@ -14,7 +14,7 @@ defencoding utf8
 encoding utf8 utf8
 
 # terminal
-term $TERM 
+term $TERM
 
 # escape
 escape ^Ss
