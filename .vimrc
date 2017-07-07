@@ -1,7 +1,7 @@
 "dein Scripts-----------------------------
 " at the first time, you need to clone dein.
 " run followning commands
-" $ mkdir -p ~/.vim/dein/repos/github.com/Shougo/dein.vim
+" $ mkdir -p ~/.vim/repos/github.com/Shougo/dein.vim
 " $ git clone https://github.com/Shougo/dein.vim.git ~/.vim/dein/repos/github.com/Shougo/dein.vim
 if &compatible
 	set nocompatible               " Be iMproved
