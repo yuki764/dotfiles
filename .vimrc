@@ -2,7 +2,7 @@
 " at the first time, you need to clone dein.
 " run followning commands
 " $ mkdir -p ~/.vim/repos/github.com/Shougo/dein.vim
-" $ git clone https://github.com/Shougo/dein.vim.git ~/.vim/dein/repos/github.com/Shougo/dein.vim
+" $ git clone https://github.com/Shougo/dein.vim.git ~/.vim/repos/github.com/Shougo/dein.vim
 if &compatible
 	set nocompatible               " Be iMproved
 endif
@@ -15,6 +15,8 @@ if dein#load_state('~/.vim')
 
 	" my plugins
 	call dein#add('thinca/vim-quickrun')
+	call dein#add('Shougo/vimfiler.vim')
+	call dein#add('Shougo/unite.vim')
 
 	call dein#end()
 	call dein#save_state()
@@ -22,6 +24,12 @@ endif
 
 filetype plugin indent on
 syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
 "End dein Scripts-------------------------
 
 " show line number
@@ -44,16 +52,22 @@ set hlsearch
 " show control char
 set list
 set listchars=tab:^-,trail:-,nbsp:%
-" messaga language
+" message language
 language messages en_US.UTF-8
+
+" backspace
+noremap! <C-?> <C-h>
+
+" to change buffers easily
+nnoremap <F3> :buffers<CR>:buffer<Space>
+
 " ctags
 au BufNewFile,BufRead *.{cpp,hpp,h} set tags+=./tags;
 noremap <C-]> g<C-]>
-" backspace
-noremap! <C-?> <C-h>
-" to change buffers easily
-nnoremap <F3> :buffers<CR>:buffer<Space>
 
 " QuickRun settings
 nnoremap <F5> :QuickRun<Space>-args<Space>
 let g:quickrun_config = {'_' : { 'split' : ':botright vsplit', 'close_on_empty' : 1 }}
+
+" VimFiler
+noremap <F8> :VimFiler -split -simple -winwidth=35 -no-quit<CR>
